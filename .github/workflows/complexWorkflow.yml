@@ -9,3 +9,21 @@ jobs:
     steps:
       - name: Print date
         run: date
+  job2:
+    name: Job2
+    runs-on: windows-latest
+    steps:
+      - name: Print date
+        run: date
+  job3:
+    name: Job3
+    runs-on: macos-latest
+    steps:
+      - name: Print date
+        run: date
+  job4:
+    name: Job4
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print date
+        run: date
