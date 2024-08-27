@@ -10,6 +10,7 @@
 ## Basic Syntax of a Workflow
 
 Workflow file is located under the `./github/workflows` directory of the repository -
+
 `./.github/workflows/workflow-file-name.yaml`
 
 ```yaml
@@ -90,6 +91,48 @@ jobs:
 - Can be grouped together
 - Control which organizations/repositories have access to which runner/runner groups
 - Do not use with public repositories
+
+<br>
+
+## Steps 
+
+- Steps are basic unit of execution in GitHub Actions. They consist of either invocations of a predefined action or a shell command to be run on the runner.
+- Shell commands are executed using the `run` clause.
+- Predefined actions are pulled in via the `uses` clause.
+- `with` clause specifies any arguments/parameters to pass to the action.
+
+<br>
+
+## Jobs
+
+- Aggregate steps and define which runner to execute them on.
+- Success or failure is dislayed at job level and not on individual step.
+- By default, jobs are executed in parallel unless we specify the `needs` as a clause under another job, in which the job will wait for the completion of the job that is specified under `needs`.
+
+<br>
+
+## Workflows
+
+- Workflow is like a pipeline. We define events on which a particular workflow will be triggered. The jobs that will be triggered as a part of that workflow are specified under the jobs section.
+
+<br>
+
+## Actions
+
+- Action can be as simple as a shell command or it can be a whole project maintained under a separate repo.
+- To be used as an action, a GitHub repository must contain an `action.yaml` file. This file contains metadata about the action.
+- The format of the file is broken down in four key areas:
+  - basic info (name, author, description)
+  - `inputs`
+  - `outputs`
+  - `runs`
+- There is also a less used branding section that allows adding an icon to the action if desired.
+- The `inputs` and `outputs` sections have typical properties, that can be set as -
+  - `description`
+  - `default`
+  - ...
+- The inputs section is important because it defines how workflows interface with this action. If a parameter is required, your workflow needs to use a with statement, when calling the action, to provide a value to pass in for that parameter.
+- The `runs` section specifies what kind of programming the action uses for its implementation.
 
 ## References
 
