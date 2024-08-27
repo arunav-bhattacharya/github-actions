@@ -1,0 +1,32 @@
+name: Complex Workflow
+
+on:
+    	push
+
+jobs:
+	job1:
+    		name: Job1
+		runs-on: ubuntu-latest
+		steps:
+		- name: Current Date
+		  run: date
+	job2:
+		name: Job2
+		runs-on: windows-latest
+		steps:
+		- name: Current Date
+		  run: date
+
+	job3:
+		name: Job3
+		runs-on: macos-latest
+		steps:
+		- name: Current Date
+		  run: date
+	job4:
+		name: Job4
+		runs-on: ubuntu-latest
+		steps:
+		- name: Current Date
+		  run: date
+		
