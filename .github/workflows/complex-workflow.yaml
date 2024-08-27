@@ -4,7 +4,6 @@ on: push
 
 jobs:
 	job1:
-		name: Job1
 		runs-on: ubuntu-latest
 		steps:
 			- name: Print Date
