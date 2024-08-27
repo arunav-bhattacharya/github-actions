@@ -1,11 +1,10 @@
 name: Complex Workflow
 
-on:
-    	push
+on: push
 
 jobs:
 	job1:
-    		name: Job1
+    	name: Job1
 		runs-on: ubuntu-latest
 		steps:
 		- name: Current Date

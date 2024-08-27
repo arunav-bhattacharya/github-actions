@@ -9,6 +9,7 @@
 
 ## Basic Syntax of a Workflow
 
+Workflow file is located under the `./github/workflows` directory of the repository -
 `./.github/workflows/workflow-file-name.yaml`
 
 ```yaml
