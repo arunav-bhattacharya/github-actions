@@ -106,7 +106,7 @@ jobs:
 ## Jobs
 
 - Aggregate steps and define which runner to execute them on.
-- Success or failure is dislayed at job level and not on individual step.
+- Success or failure is displayed at job level and not on individual step.
 - By default, jobs are executed in parallel unless we specify the `needs` as a clause under another job, in which the job will wait for the completion of the job that is specified under `needs`.
 
 <br>
